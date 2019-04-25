@@ -1,0 +1,36 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="Spending Score (1-100) <= 62.0\ngini = 0.822\nsamples = 200\nvalue = [39, 38, 35, 21, 45, 22]\nclass = 4"] ;
+1 [label="Annual Income (k$) <= 70.5\ngini = 0.738\nsamples = 140\nvalue = [0, 38, 35, 21, 45, 1]\nclass = 4"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Age <= 42.5\ngini = 0.645\nsamples = 103\nvalue = [0, 36, 0, 21, 45, 1]\nclass = 4"] ;
+1 -> 2 ;
+3 [label="Annual Income (k$) <= 38.0\ngini = 0.368\nsamples = 47\nvalue = [0, 36, 0, 10, 0, 1]\nclass = 1"] ;
+2 -> 3 ;
+4 [label="gini = 0.165\nsamples = 11\nvalue = [0, 0, 0, 10, 0, 1]\nclass = 3"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 36\nvalue = [0, 36, 0, 0, 0, 0]\nclass = 1"] ;
+3 -> 5 ;
+6 [label="Spending Score (1-100) <= 33.5\ngini = 0.316\nsamples = 56\nvalue = [0, 0, 0, 11, 45, 0]\nclass = 4"] ;
+2 -> 6 ;
+7 [label="gini = 0.0\nsamples = 11\nvalue = [0, 0, 0, 11, 0, 0]\nclass = 3"] ;
+6 -> 7 ;
+8 [label="gini = 0.0\nsamples = 45\nvalue = [0, 0, 0, 0, 45, 0]\nclass = 4"] ;
+6 -> 8 ;
+9 [label="Spending Score (1-100) <= 39.5\ngini = 0.102\nsamples = 37\nvalue = [0, 2, 35, 0, 0, 0]\nclass = 2"] ;
+1 -> 9 ;
+10 [label="Annual Income (k$) <= 72.5\ngini = 0.054\nsamples = 36\nvalue = [0, 1, 35, 0, 0, 0]\nclass = 2"] ;
+9 -> 10 ;
+11 [label="gini = 0.375\nsamples = 4\nvalue = [0, 1, 3, 0, 0, 0]\nclass = 2"] ;
+10 -> 11 ;
+12 [label="gini = 0.0\nsamples = 32\nvalue = [0, 0, 32, 0, 0, 0]\nclass = 2"] ;
+10 -> 12 ;
+13 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0, 0, 0, 0]\nclass = 1"] ;
+9 -> 13 ;
+14 [label="Annual Income (k$) <= 54.0\ngini = 0.455\nsamples = 60\nvalue = [39, 0, 0, 0, 0, 21]\nclass = 0"] ;
+0 -> 14 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+15 [label="gini = 0.0\nsamples = 21\nvalue = [0, 0, 0, 0, 0, 21]\nclass = 5"] ;
+14 -> 15 ;
+16 [label="gini = 0.0\nsamples = 39\nvalue = [39, 0, 0, 0, 0, 0]\nclass = 0"] ;
+14 -> 16 ;
+}
