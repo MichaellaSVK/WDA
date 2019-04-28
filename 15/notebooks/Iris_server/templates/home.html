@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	
+	<div class="content">
+			{% if prediction is defined %}
+                Hodnota atributu Sepal Length: {{ sepal_length }}<br>
+                Hodnota atributu Sepal Width: {{ sepal_width }}<br>
+                Hodnota atributu Petal Length: {{ petal_length }}<br>
+                Hodnota atributu Petal Width: {{ petal_width }}<br>
+                <br>
+                Predikovana hodnota cieloveho atributu je: {{ prediction }}.
+			{% else %}
+				Vyplnte pozadovane udaje!
+			{% endif %}
+	</div>
+
+	{% block page_content %}
+	<div class="content">
+		<form method="POST">
+
+			{{ form.param1.label }} {{ form.param1() }}
+			<br>
+			{{ form.param2.label }} {{ form.param2() }}
+			<br>
+			{{ form.param3.label }} {{ form.param3() }}
+			<br>
+			{{ form.param4.label }} {{ form.param4() }}
+			<br>
+			<br>
+			{{ form.submit() }}
+		</form>
+	</div>
+	{% endblock %}
+
+
+<script> var i =  [1,2,3] </script>
+{% endblock %}
+
